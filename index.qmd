@@ -6,23 +6,23 @@ description: "Deskripsi Singkat"
 
 ## Kata Pengantar {.unnumbered}
 
-Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya sangat senang dapat mempersembahkan eBook **"Quarto Template"** kepada para pembaca dan pengguna. eBook ini disusun sebagai panduan praktis untuk membantu mahasiswa, dosen, peneliti, serta praktisi dalam memanfaatkan Quarto sebagai salah satu perangkat untuk menyusun, mengelola, dan menerbitkan dokumen secara profesional.
+Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya sangat senang dapat mempersembahkan eBook "Pengantar Statistika" kepada para pembaca dan pengguna. eBook ini disusun sebagai panduan praktis untuk membantu mahasiswa, khususnya di bidang Sains Data, maupun pembelajar umum dalam memahami konsep dasar statistika serta mengaplikasikannya untuk mengolah, menganalisis, dan menarik kesimpulan dari data secara tepat.
 
-Quarto merupakan perangkat *open-source scientific and technical publishing* yang memungkinkan pengguna mengintegrasikan teks, kode pemrograman, hasil analisis, visualisasi data, serta berbagai elemen pendukung lainnya ke dalam satu dokumen. Dengan Quarto, proses penulisan dan publikasi dapat dilakukan secara lebih terstruktur, reproducible, dan efisien dalam berbagai format keluaran, seperti HTML, PDF, Microsoft Word, serta format publikasi lainnya.
+Statistika merupakan fondasi utama dalam ilmu data dan pengambilan keputusan berbasis bukti (data-driven decision making). Melalui pemahaman statistika yang kuat, data mentah yang semula tampak acak dapat diubah menjadi informasi yang terstruktur, bermakna, dan dapat dipertanggungjawabkan secara ilmiah. Dengan memadukan teori statistika dan komputasi menggunakan bahasa pemrograman R, proses analisis data dapat dilakukan secara lebih sistematis, reproducible, dan efisien.
 
-Contoh sitasi: tuliskan `[@xie2015]` untuk merujuk entri `xie2015` di `references/book.bib`. Pada hasil render, sitasinya tampil seperti ini [@xie2015].
+Melalui eBook ini, pembaca akan diperkenalkan pada berbagai konsep esensial dalam pengantar statistika, mulai dari logika dasar pengujian hipotesis, perumusan hipotesis nol dan alternatif, komponen uji signifikansi (p-value dan tingkat signifikansi), analisis kesalahan Tipe I dan Tipe II beserta power statistik, hingga interpretasi hasil analisis secara bijak agar terhindar dari kekeliruan penafsiran data.
 
-Melalui eBook ini, pembaca akan diperkenalkan pada penggunaan template Quarto, mulai dari pengenalan struktur proyek, pengaturan konfigurasi, penulisan dokumen menggunakan Markdown, integrasi kode pemrograman, pengelolaan referensi, hingga proses *rendering* menjadi dokumen yang siap digunakan dan dipublikasikan.
+Materi disusun secara bertahap dengan pendekatan kontekstual dan studi kasus agar mudah dipahami serta dipraktikkan, termasuk oleh pembaca yang baru pertama kali mempelajari statistika terapan. Konsep dan contoh kode R yang disajikan diharapkan dapat menjadi bekal dalam menyelesaikan kebutuhan praktikum, tugas perkuliahan, riset akademik, maupun proyek eksplorasi data.
 
-Materi disusun secara bertahap agar mudah dipahami dan dipraktikkan, termasuk oleh pengguna yang baru pertama kali mengenal Quarto. Template dan contoh yang disajikan diharapkan dapat menjadi referensi dalam mengembangkan berbagai kebutuhan dokumentasi akademik, laporan penelitian, modul pembelajaran, buku elektronik, maupun publikasi berbasis data.
-
-Saya berharap eBook ini dapat memberikan manfaat nyata dalam mendukung peningkatan literasi digital, produktivitas akademik, dan penerapan praktik penulisan ilmiah yang modern. Lebih dari sekadar panduan teknis, eBook ini diharapkan dapat mendorong pembaca untuk mengeksplorasi berbagai kemampuan Quarto dan mengembangkan template sesuai dengan kebutuhan masing-masing.
+Saya berharap eBook ini dapat memberikan manfaat nyata dalam membangun pola pikir analitis, meningkatkan literasi statistik, dan mendukung produktivitas belajar di era Big Data. Lebih dari sekadar rangkuman materi perkuliahan, eBook ini diharapkan dapat mendorong pembaca untuk mengeksplorasi lebih jauh berbagai metode analisis data sesuai dengan kebutuhan masing-masing.
 
 Saya menyadari bahwa eBook ini masih memiliki ruang untuk penyempurnaan. Oleh karena itu, kritik, saran, dan masukan dari para pembaca sangat diharapkan sebagai bahan evaluasi untuk pengembangan edisi berikutnya.
 
-Akhir kata, semoga eBook ini dapat menjadi referensi yang bermanfaat dan memberikan kontribusi positif bagi dunia pendidikan, penelitian, dan pengembangan ilmu pengetahuan.
+Akhir kata, semoga eBook ini dapat menjadi referensi yang bermanfaat dan memberikan kontribusi positif bagi proses pembelajaran serta pengembangan ilmu pengetahuan di bidang Sains Data.
 
-**Dewi Wulan**  
+
+**Dewi Wulan**
+
 Penulis
 
 
@@ -30,8 +30,10 @@ Penulis
 
 ![Foto Dewi Wulan](images/author/DEWI.png){.author-portrait width=1.5in fig-align="right" fig-pos="H"}
 
-**[Dewi Wulan](https://www.linkedin.com/in/dsciencelabs/)** bekerja sebagai Dosen di Prodi Sains Data Institut Teknologi Sains Bandung. Beliau adalah meraih gelar Magister-nya dari Departemen Matematika Terapan (Applied Mathematics) National Sun Yat Sen University, Taiwan. Selain mengajar beliau juga pernah bekerja sebagai **Data Scientist Freelance** di perusahaan-perusahaan ternama seperti [JNE](https://www.jne.co.id/id/beranda), [Samora Group](https://www.samoragroup.co.id/home/en), [Pertamina](https://www.pertamina.com/), dan saat ini masih aktif sebagai **Data Scientist Freelance** di [PT. Green City Traffic](PT. Green City Traffic). Beliau memiliki antusiasme khusus dalam mengerjakan proyek (mengajar) Big Data Analytics, Machine Learning, Optimisasi, dan Analisis Time Series di bidang keuangan dan investasi. Keahlian utama yang dimilikinya adalah bahasa pemrograman Statistik seperti R Studio dan Python. Beliau juga sudah terbiasa dalam mengaplikasikan sistem basis data MySQL/NoSQL untuk manajemen data, serta mahir dalam menggunakan tools Big Data seperti Spark dan Hadoop. Beberapa project beliau dapat dilihat di link berikut: [Rpubs](https://rpubs.com/dsciencelabs), [Github](https://github.com/dsciencelabs), [Website](https://dsciencelabs.github.io/web/index.html), dan [Kaggle](https://www.kaggle.com/baktisiregar/code). 
+**[Dewi Wulan](https://www.linkedin.com/in/dsciencelabs/)**
 
+Mahasiswa Sains Data di **Institut Teknologi Sains Bandung (ITSB)** dengan ketertarikan pada bidang Data Analytics, Data Science, dan teknologi. Saat ini berfokus mengembangkan pengetahuan dan keterampilan
+ dalam pengolahan data, analisis, serta pemanfaat data untuk menghasilkan informasi yang bermakna.
 
 ## Ucapan Terima Kasih 
 
@@ -48,4 +50,4 @@ Saya berharap Template eBook ini dapat menjadi referensi yang bermanfaat dan mem
 
 Semua masukan dan tanggapan Anda sangat berarti bagi kami untuk memperbaiki Ebook Quarto Template ini kedepannya. Bagi para pembaca/pengguna yang ingin menyampaikan masukan dan tanggapan, dipersilahkan melalui kontak dibawah ini!
 
-**Email:** dsciencelabs@outlook.com
+**Email:** dewilan63@gmail.com

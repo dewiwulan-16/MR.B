@@ -133,39 +133,6 @@
 \makeatother
 
 
-% definitions for citeproc citations
-\NewDocumentCommand\citeproctext{}{}
-\NewDocumentCommand\citeproc{mm}{%
-  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
-\makeatletter
- % allow citations to break across lines
- \let\@cite@ofmt\@firstofone
- % avoid brackets around text for \cite:
- \def\@biblabel#1{}
- \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
-\makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \ifLuaTeX
 \usepackage[bidi=basic,shorthands=off,provide=*]{babel}
@@ -279,7 +246,7 @@
 
 \title{Tugas Statitiska}
 \author{Dewi Wulan}
-\date{2026-11-25}
+\date{2026-11-28}
 \begin{document}
 \frontmatter
 \maketitle
@@ -299,42 +266,39 @@
 \markboth{Kata Pengantar}{Kata Pengantar}
 
 Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya sangat senang
-dapat mempersembahkan eBook \textbf{``Quarto Template''} kepada para
-pembaca dan pengguna. eBook ini disusun sebagai panduan praktis untuk
-membantu mahasiswa, dosen, peneliti, serta praktisi dalam memanfaatkan
-Quarto sebagai salah satu perangkat untuk menyusun, mengelola, dan
-menerbitkan dokumen secara profesional.
+dapat mempersembahkan eBook ``Pengantar Statistika'' kepada para pembaca
+dan pengguna. eBook ini disusun sebagai panduan praktis untuk membantu
+mahasiswa, khususnya di bidang Sains Data, maupun pembelajar umum dalam
+memahami konsep dasar statistika serta mengaplikasikannya untuk
+mengolah, menganalisis, dan menarik kesimpulan dari data secara tepat.
 
-Quarto merupakan perangkat \emph{open-source scientific and technical
-publishing} yang memungkinkan pengguna mengintegrasikan teks, kode
-pemrograman, hasil analisis, visualisasi data, serta berbagai elemen
-pendukung lainnya ke dalam satu dokumen. Dengan Quarto, proses penulisan
-dan publikasi dapat dilakukan secara lebih terstruktur, reproducible,
-dan efisien dalam berbagai format keluaran, seperti HTML, PDF, Microsoft
-Word, serta format publikasi lainnya.
+Statistika merupakan fondasi utama dalam ilmu data dan pengambilan
+keputusan berbasis bukti (data-driven decision making). Melalui
+pemahaman statistika yang kuat, data mentah yang semula tampak acak
+dapat diubah menjadi informasi yang terstruktur, bermakna, dan dapat
+dipertanggungjawabkan secara ilmiah. Dengan memadukan teori statistika
+dan komputasi menggunakan bahasa pemrograman R, proses analisis data
+dapat dilakukan secara lebih sistematis, reproducible, dan efisien.
 
-Contoh sitasi: tuliskan \texttt{{[}@xie2015{]}} untuk merujuk entri
-\texttt{xie2015} di \texttt{references/book.bib}. Pada hasil render,
-sitasinya tampil seperti ini \citeproc{ref-xie2015}{{[}1{]}}.
+Melalui eBook ini, pembaca akan diperkenalkan pada berbagai konsep
+esensial dalam pengantar statistika, mulai dari logika dasar pengujian
+hipotesis, perumusan hipotesis nol dan alternatif, komponen uji
+signifikansi (p-value dan tingkat signifikansi), analisis kesalahan Tipe
+I dan Tipe II beserta power statistik, hingga interpretasi hasil
+analisis secara bijak agar terhindar dari kekeliruan penafsiran data.
 
-Melalui eBook ini, pembaca akan diperkenalkan pada penggunaan template
-Quarto, mulai dari pengenalan struktur proyek, pengaturan konfigurasi,
-penulisan dokumen menggunakan Markdown, integrasi kode pemrograman,
-pengelolaan referensi, hingga proses \emph{rendering} menjadi dokumen
-yang siap digunakan dan dipublikasikan.
+Materi disusun secara bertahap dengan pendekatan kontekstual dan studi
+kasus agar mudah dipahami serta dipraktikkan, termasuk oleh pembaca yang
+baru pertama kali mempelajari statistika terapan. Konsep dan contoh kode
+R yang disajikan diharapkan dapat menjadi bekal dalam menyelesaikan
+kebutuhan praktikum, tugas perkuliahan, riset akademik, maupun proyek
+eksplorasi data.
 
-Materi disusun secara bertahap agar mudah dipahami dan dipraktikkan,
-termasuk oleh pengguna yang baru pertama kali mengenal Quarto. Template
-dan contoh yang disajikan diharapkan dapat menjadi referensi dalam
-mengembangkan berbagai kebutuhan dokumentasi akademik, laporan
-penelitian, modul pembelajaran, buku elektronik, maupun publikasi
-berbasis data.
-
-Saya berharap eBook ini dapat memberikan manfaat nyata dalam mendukung
-peningkatan literasi digital, produktivitas akademik, dan penerapan
-praktik penulisan ilmiah yang modern. Lebih dari sekadar panduan teknis,
-eBook ini diharapkan dapat mendorong pembaca untuk mengeksplorasi
-berbagai kemampuan Quarto dan mengembangkan template sesuai dengan
+Saya berharap eBook ini dapat memberikan manfaat nyata dalam membangun
+pola pikir analitis, meningkatkan literasi statistik, dan mendukung
+produktivitas belajar di era Big Data. Lebih dari sekadar rangkuman
+materi perkuliahan, eBook ini diharapkan dapat mendorong pembaca untuk
+mengeksplorasi lebih jauh berbagai metode analisis data sesuai dengan
 kebutuhan masing-masing.
 
 Saya menyadari bahwa eBook ini masih memiliki ruang untuk penyempurnaan.
@@ -342,10 +306,11 @@ Oleh karena itu, kritik, saran, dan masukan dari para pembaca sangat
 diharapkan sebagai bahan evaluasi untuk pengembangan edisi berikutnya.
 
 Akhir kata, semoga eBook ini dapat menjadi referensi yang bermanfaat dan
-memberikan kontribusi positif bagi dunia pendidikan, penelitian, dan
-pengembangan ilmu pengetahuan.
+memberikan kontribusi positif bagi proses pembelajaran serta
+pengembangan ilmu pengetahuan di bidang Sains Data.
 
-\textbf{Dewi Wulan}\\
+\textbf{Dewi Wulan}
+
 Penulis
 
 \section*{Penulis}\label{penulis}
@@ -364,27 +329,12 @@ Penulis
 \end{figure}%
 
 \textbf{\href{https://www.linkedin.com/in/dsciencelabs/}{Dewi Wulan}}
-bekerja sebagai Dosen di Prodi Sains Data Institut Teknologi Sains
-Bandung. Beliau adalah meraih gelar Magister-nya dari Departemen
-Matematika Terapan (Applied Mathematics) National Sun Yat Sen
-University, Taiwan. Selain mengajar beliau juga pernah bekerja sebagai
-\textbf{Data Scientist Freelance} di perusahaan-perusahaan ternama
-seperti \href{https://www.jne.co.id/id/beranda}{JNE},
-\href{https://www.samoragroup.co.id/home/en}{Samora Group},
-\href{https://www.pertamina.com/}{Pertamina}, dan saat ini masih aktif
-sebagai \textbf{Data Scientist Freelance} di
-\href{PT.\%20Green\%20City\%20Traffic}{PT. Green City Traffic}. Beliau
-memiliki antusiasme khusus dalam mengerjakan proyek (mengajar) Big Data
-Analytics, Machine Learning, Optimisasi, dan Analisis Time Series di
-bidang keuangan dan investasi. Keahlian utama yang dimilikinya adalah
-bahasa pemrograman Statistik seperti R Studio dan Python. Beliau juga
-sudah terbiasa dalam mengaplikasikan sistem basis data MySQL/NoSQL untuk
-manajemen data, serta mahir dalam menggunakan tools Big Data seperti
-Spark dan Hadoop. Beberapa project beliau dapat dilihat di link berikut:
-\href{https://rpubs.com/dsciencelabs}{Rpubs},
-\href{https://github.com/dsciencelabs}{Github},
-\href{https://dsciencelabs.github.io/web/index.html}{Website}, dan
-\href{https://www.kaggle.com/baktisiregar/code}{Kaggle}.
+
+Mahasiswa Sains Data di \textbf{Institut Teknologi Sains Bandung (ITSB)}
+dengan ketertarikan pada bidang Data Analytics, Data Science, dan
+teknologi. Saat ini berfokus mengembangkan pengetahuan dan keterampilan
+dalam pengolahan data, analisis, serta pemanfaat data untuk menghasilkan
+informasi yang bermakna.
 
 \section*{Ucapan Terima Kasih}\label{ucapan-terima-kasih}
 \addcontentsline{toc}{section}{Ucapan Terima Kasih}
@@ -424,7 +374,7 @@ memperbaiki Ebook Quarto Template ini kedepannya. Bagi para
 pembaca/pengguna yang ingin menyampaikan masukan dan tanggapan,
 dipersilahkan melalui kontak dibawah ini!
 
-\textbf{Email:} dsciencelabs@outlook.com
+\textbf{Email:} dewilan63@gmail.com
 
 \bookmarksetup{startatroot}
 
@@ -3660,14 +3610,6 @@ pemahaman dengan merujuk pada:
 \markboth{Referensi}{Referensi}
 
 \protect\phantomsection\label{refs}
-\begin{CSLReferences}{0}{0}
-\bibitem[\citeproctext]{ref-xie2015}
-\CSLLeftMargin{{[}1{]} }%
-\CSLRightInline{Y. Xie, \emph{\href{http://yihui.name/knitr/}{Dynamic
-Documents with {R} and knitr}}, 2nd ed. Boca Raton, Florida: Chapman;
-Hall/CRC, 2015.}
-
-\end{CSLReferences}
 
 
 \backmatter
